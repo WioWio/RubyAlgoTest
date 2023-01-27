@@ -6,17 +6,17 @@ def is_prime(x)
         end
         y += 1
     end
-    return true
+    true
 end
 
 def print_primes(x)
     y = 2
     while y <= x do
-        if  is_prime(y) == false
+        if  !is_prime(y)
             puts y
         end
         y += 1
     end
 end
 
-print_primes(3)
+print_primes(4)
