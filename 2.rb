@@ -1,30 +1,30 @@
 def is_correct(vers)
-    if not vers.respond_to?(:split)
+    unless vers.respond_to?(:split)
         return "Put 4 nums with dots"
     end
-    splitted = vers.split(/\./)
-    if splitted.length() != 4
+    splited = vers.split(/\./)
+    if splited.length != 4
         return "Incorrect count of nums"
     end
-    return true
+    true
 end
 
 def oldest(a,b)
-    for i in 0..3 do
+    (0..3).each { |i|
         a[i] = a[i].to_i
         b[i] = b[i].to_i
-    end
-    
-    for i in 0..3 do
+    }
+
+    (0..3).each { |i|
         if a[i] != b[i]
             if a[i] < b[i]
                 return a.join(".")
             else
-            return b.join(".")
+                return b.join(".")
             end
         end
-    end
-    return a.join(".") #"None"
+    }
+    a.join(".") #"None"
 end
 
 version1,version2 = 0, 0
