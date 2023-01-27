@@ -1,10 +1,10 @@
 def is_prime(x)
-    y = x - 1
-    while y >= 2 do
+    y = 2
+    while y <= Math.sqrt(x) do
         if x%y == 0
             return false
         end
-        y -= 1
+        y += 1
     end
     return true
 end
@@ -19,4 +19,4 @@ def print_primes(x)
     end
 end
 
-print_primes(25)
+print_primes(3)
